@@ -1,0 +1,125 @@
+@import 'config.less';
+@import 'font/iconfont.css';
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td {
+  margin: 0;
+  padding: 0
+}
+
+ul,li {
+    list-style: none; //设置列表的标记项，设置为none, 表示开头没有图形标识
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+img {
+    border:0;
+    display: block;
+}
+
+q:before, q:after {
+  content: ''
+}  //在<q>标签中内容  两段添加"
+
+.fb() {
+  font-weight: bold
+}
+
+.unl() {
+  text-decoration: underline
+}
+
+.no_unl() {
+  text-decoration: none
+}
+
+.fl {
+  float: left;
+  display: inline
+}
+
+.fr {
+  float: right;
+  display: inline
+}
+
+.clearfix:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden
+}
+
+.clearfix() {
+  display: inline-block
+}
+
+* html .clearfix {
+  height: 1%
+}
+
+.clearfix() {
+  display: block
+}
+
+.none() {
+  display: none
+}
+
+.mt28 {
+  margin-top: 28px;
+}
+
+//定位居中div
+.abs-center(@width,@height) {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  width: @width;
+  height: @height;
+  margin: -(@height/2) 0 0 -(@width/2);
+}
+.abs-top{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.abs-bottom{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.m20{
+  margin: 20px;
+}
+.mb20{
+  margin-bottom: 20px;
+}
+
+.iconfont{
+  font-size: @f18 !important;
+  margin-right: 10px;
+}
+.icon-zhuxiao, .icon-quxiao { color:#2d95e5; }
+.icon-jiahao,.icon-user{ font-size: 24px !important;}
+
+/*======重写antd的Menu组件样式======*/
+.ant-menu-inline > .ant-menu-item, .ant-menu-inline > .ant-menu-submenu > .ant-menu-submenu-title{ font-size: @f14;}
+.ant-menu-inline > .ant-menu-item, .ant-menu-submenu-inline{ background: #263238; color: #96999e}
+.ant-menu-inline > .ant-menu-item a{ color: #96999e}
+.ant-menu-inline .ant-menu-item.ant-menu-item-selected,
+.ant-menu-inline > .ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu .ant-menu-item.ant-menu-item-selected{ background: #2480c6;  }
+.ant-menu-inline .ant-menu-item.ant-menu-item-selected a,
+.ant-menu-inline > .ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu .ant-menu-item.ant-menu-item-selected a{ color: #ffffff;  }
+.ant-menu-inline > .ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu,
+.ant-menu-inline > .ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu .ant-menu-submenu-inline.ant-menu-submenu,
+.ant-menu-inline > .ant-menu-submenu-inline.ant-menu-submenu-open.ant-menu-submenu .ant-menu-item{ background: #1e282d;}
+.ant-table-pagination {float: left};
+.ant-spin-nested-loading .ant-spin {top: 30px}

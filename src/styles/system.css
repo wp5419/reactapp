@@ -1,0 +1,32 @@
+.system-params {
+  margin: 10px 0 10px 100px;
+}
+
+.system-params tr {
+  width: 100%;
+  height: 46px;
+}
+
+.system-params .input-width {
+  width: 200px;
+}
+
+.system-params tr td .input-span {
+  margin-left: 8px;
+}
+
+.system-params tr td:nth-child(even) {
+  width: 400px;
+  text-align: left;
+
+}
+.system-params tr td:nth-child(odd) {
+  width: 150px;
+  text-align: right;
+  padding-right: 20px;
+}
+
+.system-down-btn {
+  float: right;
+  margin-left: 10px;
+}

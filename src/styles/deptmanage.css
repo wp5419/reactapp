@@ -1,0 +1,30 @@
+.add-cancel-button,.add-ok-button{
+  display: inline-block;
+  width: 150px;
+  right: 106px;
+}
+.add-modal-content{
+  text-align: center;
+}
+.dept-add-title{
+  font-size: 14px;
+  margin-right: 10px;
+}
+
+.operation-list:hover, .page-option-icon:hover {
+  cursor: pointer;
+}
+.dept-add-input{
+  border-radius: 5px;
+  width: 200px;
+  font-size: 15px;
+  height: 30px;
+}
+.dept-table-edit{
+  text-align: center;
+}
+.dept-edit-icon{
+  padding-right: 10px;
+  font-size: 20px;
+  color: #2692e4;
+}

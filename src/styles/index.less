@@ -1,0 +1,374 @@
+@import 'base.less';
+
+body {
+  background: @bg-grey;
+  font-size: @f14;
+  font-family: @YaHei;
+}
+
+.left-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  overflow: auto;
+  background: #263238;
+  .left-logo {
+    background: #242f35;
+    color: @font-white;
+    font-size: @f16;
+    line-height: 60px;
+    img {
+      .fl;
+      width: 40px;
+      height: 40px;
+      margin: 10px 10px 0 20px;
+    }
+  }
+}
+
+.small-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background: #263238;
+  .small-logo {
+    img {
+      width: 30px;
+      height: 30px;
+      margin: 10px 14px 10px 6px;
+    }
+  }
+  .ant-menu-inline, .ant-menu-vertical {
+    border: none;
+  }
+  .ant-menu {
+    background: #263238;
+    li {
+      border: none;
+      padding: 0;
+      margin: 15px 0;
+      text-align: center;
+      .iconfont {
+        color: @font-white;
+        font-size: 24px !important;
+      }
+      .ant-menu-submenu-title {
+        padding: 0;
+      }
+      .ant-menu-vertical {
+        border-radius: 0 !important;
+        margin-left: 0;
+        li {
+          padding-left: 20px;
+          text-align: left !important;
+        }
+      }
+      .ant-menu-submenu-title:after {
+        content: '';
+      }
+      .ant-menu-item {
+        font-size: @f14 !important;
+        color: @font-white;
+        a {
+          color: @font-white;
+        }
+      }
+    }
+  }
+  .ant-menu:not(.ant-menu-horizontal) .ant-menu-item-selected,
+  .ant-menu-item-active,
+  .ant-menu-vertical .ant-menu-submenu-selected,
+  .ant-menu-vertical .ant-menu-submenu-open {
+    background: #2480c6;
+  }
+}
+
+.right-container {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.top-bar {
+  height: 60px;
+  line-height: 60px;
+  padding: 0 20px;
+  background: @bg-white;
+  .user-info {
+    position: relative;
+    cursor: pointer;
+    .top-bar-drop {
+      position: absolute;
+      top: 50px;
+      right: 20px;
+      width: 120px;
+      padding: 15px;
+      background: @bg-white;
+      border-radius: 3px;
+      box-shadow: 0 0 10px 1px @bg-grey;
+      z-index: 1;
+      li {
+        line-height: 30px;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.main {
+  .abs-bottom;
+  top: 120px;
+  padding: 0 20px;
+  overflow: auto;
+}
+
+.guide {
+  height: 60px;
+  line-height: 60px;
+  .ant-breadcrumb {
+    font-size: @f14 !important;
+  }
+}
+
+.filter {
+  li {
+    .fl;
+    line-height: 32px;
+    width: 25%;
+    margin: 10px 0;
+    .form-label {
+      .fl;
+      margin-right: 10px;
+      width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right;
+      font-size: @f14;
+    }
+    .select {
+      .fl;
+      width: calc(100% - 30%);
+    }
+    .mlr30 {
+      .fl;
+      margin: 0 30px;
+    }
+  }
+  li.buttons {
+    .fr;
+    text-align: right;
+    button {
+      margin-left: 30px;
+    }
+  }
+}
+
+.index-filter {
+  background: @bg-white;
+  border-radius: 10px;
+  padding: 10px 35px;
+}
+
+.mt20 {
+  margin-top: 20px;
+}
+
+.box-w60 {
+  width: 63.5%;
+}
+
+.box-w35 {
+  width: 35%;
+}
+
+.box {
+  background: @bg-white;
+  border-radius: 10px;
+  .box-head {
+    padding: 0 20px;
+    height: 50px;
+    line-height: 50px;
+    border-bottom: #d9d9d9 solid 1px;
+    font-size: @f16;
+  }
+}
+
+.myChart-box {
+  height: 98%;
+  background: @bg-white;
+  border-radius: 10px;
+
+}
+.myChart-head {
+  height: 30%;
+  padding: 0 0px;
+  border-bottom: #d9d9d9 solid 1px;
+}
+.myChart-down {
+  height: 70%;
+}
+.myChart-left {
+  height: 100%;
+  width:30%;
+  float: left;
+  border-right: #d9d9d9 solid 1px;
+}
+
+.myChart-right {
+  height: 100%;
+  float: left;
+  width:70%;
+}
+
+.h308 {
+  height: 308px;
+}
+
+.seat-status {
+  .clearfix;
+  padding: 35px 0 0;
+  li {
+    .fl;
+    width: 140px;
+    height: 188px;
+    margin: 0 35px;
+    position: relative;
+    &:first-child {
+      background: url("../images/seats_1.png") no-repeat;
+    }
+    &:nth-child(2) {
+      background: url("../images/seats_2.png") no-repeat;
+    }
+    &:last-child {
+      background: url("../images/seats_3.png") no-repeat;
+    }
+    .seat-num {
+      margin-top: 50px;
+      text-align: center;
+      color: @font-white;
+      font-size: @f30;
+      span {
+        margin-right: 5px;
+        font-size: @f36;
+      }
+    }
+    .bottom-bg {
+      .abs-bottom;
+      height: 55px;
+      background: @bg-black;
+      opacity: 0.2;
+      border-radius: 0 0 5px 5px;
+    }
+    .bottom-text {
+      .abs-bottom;
+      font-size: @f18;
+      text-align: center;
+      line-height: 55px;
+      color: @font-white;
+    }
+  }
+}
+
+.chart-head{
+  text-align: center;
+  margin:30px 25px;
+  .form-label{
+    font-size: @f14 !important;
+    margin-right: 20px;
+  }
+}
+
+.ant-table tr th, .ant-table td {
+  text-align: center;
+}
+
+.index-add {
+  color: #2594E4;
+  cursor: pointer;
+  margin-bottom: 20px;
+  width: 130px;
+}
+
+.index-add i {
+  margin-right: 5px;
+}
+
+.operation-list li {
+  .fl;
+  color: #2692e4;
+  .operation-disabled {
+    color: #cccccc;
+  }
+}
+
+.box-head {
+  margin: 0 20px;
+  .ant-input, .ant-select {
+    width: 150px !important;
+  }
+  li {
+    margin-top: 20px;
+    .form-label {
+      .fl;
+      margin-right: 10px;
+      width: 60px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      text-align: right;
+      line-height: 28px;
+    }
+    .form-content {
+      .fl;
+      width: calc(100% - 40%);
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.banner-list li {
+  .fl;
+  margin: 0 5px;
+  border: #ccc solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  img {
+    width: 78px;
+    height: 78px;
+  }
+}
+
+.ant-upload-list-picture-card .ant-upload-list-item-info:hover:before {
+  left: 0;
+}
+
+.ant-upload-list-picture-card .ant-upload-list-item-info:hover .anticon-eye-o{
+  left: 65% !important;
+}
+.ant-upload-list-picture-card .ant-upload-list-item-info:hover .anticon-delete{
+  opacity: .0 !important;
+}
+
+
