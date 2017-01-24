@@ -6,7 +6,8 @@
             "name": "Launch Chrome against localhost",
             "type": "chrome",
             "request": "launch",
-            "url": "http://localhost:8000",
+            //"url": "http://localhost:8000",
+            "url": "${workspaceRoot}/src/test/index.html",
             "webRoot": "${workspaceRoot}"
         },
         {

@@ -11,14 +11,21 @@ class Login extends React.Component{
         super(props);
         this.state = {username:'',password:''};
     }
+
     login(){
-        //
-    }
-    check(obj){
-        if(obj.username == 'admin' && obj.password == 'admin'){
-            
+        if(this.check(this.state)){
+            this.props.dispatch();
         }
     }
+
+    check(obj){
+        if(obj.username == 'admin' && obj.password == 'admin'){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     render() {
         return(
             <div>
@@ -39,5 +46,9 @@ class Login extends React.Component{
         );
     }
 }
-
-export default Login;
+``
+export default connect(
+    state => {
+        return state.loginData;
+    }
+)(Login);
