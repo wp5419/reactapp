@@ -1,7 +1,7 @@
 import {USER_LOGIN} from 'sources/constants';
 
 const initState = {
-    login_data : {username:"",password:""}
+    login_data : {username:'',password:''}
 };
 
 export default (state = initState, action) => {

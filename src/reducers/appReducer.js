@@ -4,7 +4,7 @@ import loginData from './loginReducer';
 
 const appReducerConbine = combineReducers({
     loginData,
-    routing: routerReducer,
+    routing: routerReducer
 });
 
 export default appReducerConbine;

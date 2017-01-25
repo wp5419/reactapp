@@ -46,7 +46,7 @@ class Login extends React.Component{
         );
     }
 }
-``
+
 export default connect(
     state => {
         return state.loginData;

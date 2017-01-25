@@ -1,6 +1,6 @@
 require('normalize.css/normalize.css');
 require('styles/App.css');
-
+import {connect} from 'react-redux';
 import React from 'react';
 
 let yeomanImage = require('../images/login_bg.jpg');
@@ -8,8 +8,8 @@ let yeomanImage = require('../images/login_bg.jpg');
 class AppComponent extends React.Component {
   render() {
     return (
-      <div className="index">
-        {this.props.children}
+      <div>
+         {this.props.children}
       </div>
     );
   }
@@ -18,4 +18,4 @@ class AppComponent extends React.Component {
 AppComponent.defaultProps = {
 };
 
-export default AppComponent;
+export default connect()(AppComponent);
